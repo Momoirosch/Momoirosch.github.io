@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AI AdHunt</title>
+</head>
+<body>
+	<h1>AI AdHunt</h1>
+	
+	<!-- Create a link button -->
+	<button onclick="createLink()">Create a Link</button>
+	<p>Enter your link below:</p>
+	<input type="text" id="inputLink">
+	<p>Click the button below to get your link:</p>
+	<p id="outputLink"></p>
+	
+	<!-- Endless mode button -->
+	<button onclick="endlessMode()">Endless Mode</button>
+	
+	<script>
+		// Create a link function
+		function createLink() {
+			var link = document.getElementById("inputLink").value;
+			var output = "https://github.com/Momoirosch/AI-AdHunt/blob/main/index.html?link=" + link;
+			document.getElementById("outputLink").innerHTML = "<a href='" + output + "'>" + output + "</a>";
+		}
+		
+		// Endless mode function
+		function endlessMode() {
+			window.location.href = "https://github.com/Momoirosch/AI-AdHunt/endlessmode.html";
+		}
+	</script>
+</body>
+</html>
